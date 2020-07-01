@@ -20,6 +20,6 @@ workflows:
     jobs:
     - stepOne
     - stepTwo:
-        requireds:
+        requires:
         - stepOne
      
