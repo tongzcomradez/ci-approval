@@ -26,7 +26,8 @@ workflows:
   greeting:
     jobs:
     - stepOne
-    - stepOne
+    - stepOne:
+        name: stepOneTwo
     - stepTwo:
         requires:
         - stepOne
