@@ -1,0 +1,23 @@
+version: 2.1
+jobs:
+  stepOne:
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+      - run: echo One
+
+  stepTwo:
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+      - run: echo Two
+
+workflows:
+  version: 2
+  greeting:
+    jobs:
+    - stepOne
+    - stepTwo
+     
